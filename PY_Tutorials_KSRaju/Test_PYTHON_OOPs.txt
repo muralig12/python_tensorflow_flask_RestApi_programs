@@ -1,0 +1,275 @@
+1. Which function is called when the following code is executed?
+f = foo()
+format(f)
+
+a) format()
+b) __format__()
+c) str()
+d) __str__() *
+
+2. Which function overloads the + operator?
+ a) __add__()*
+ b) __plus__()
+ c) __sum__()
+ d) none of the mentioned
+
+3. Which operator is overloaded by __invert__()?
+ a) !
+ b) ~ *
+ c) ^
+ d) –
+
+4. Which function overloads the == operator?
+ a) __eq__() *
+ b) __equ__()
+ c) __isequal__()
+ d) none of the mentioned
+
+5. Which operator is overloaded by __lg__()?
+ a) <
+ b) >
+ c) !=
+ d) none of the mentioned *
+
+6. Which function overloads the >> operator?
+ a) __more__()
+ b) __gt__()
+ c) __ge__()
+ d) none of the mentioned *
+
+__rshift__() overloads the >> operator.
+
+7. _____ represents an entity in the real world with its identity and behaviour.
+ a) A method
+ b) An object *
+ c) A class
+ d) An operator
+
+8. _____ is used to create an object.
+ a) class
+ b) constructor  *
+ c) User-defined functions
+ d) In-built functions
+
+
+9. What is the output of the following code?
+class test:
+     def __init__(self,a="Hello World"):
+         self.a=a
+     def display(self):
+         print(self.a)
+obj=test()
+obj.display()
+
+a) The program has an error because constructor can’t have default arguments
+b) Nothing is displayed
+c) “Hello World” is displayed *
+d) The program has an error display function doesn’t have parameters
+
+
+10. What is getattr() used for?
+ a) To access the attribute of the object *
+ b) To delete an attribute
+ c) To check if an attribute exists or not
+ d) To set an attribute
+
+11. What is the output of the following code?
+class change:
+    def __init__(self, x, y, z):
+        self.a = x + y + z
+ x = change(1,2,3)
+y = getattr(x, 'a')
+setattr(x, 'a', y+1)
+print(x.a)
+
+a) 6
+b) 7  *
+c) Error
+ d) 0
+
+Explanation: First, a=1+2+3=6. Then, after setattr() is invoked, x.a=6+1=7.
+
+12. What is the output of the following code?
+ class test:
+     def __init__(self,a):
+         self.a=a
+     def display(self):
+         print(self.a)
+obj=test()
+obj.display()
+
+a) Runs normally, doesn’t display anything
+b) Displays 0, which is the automatic default value
+c) Error as one argument is required while creating the object *
+d) Error as display function requires additional argument
+
+13. What is the output of the following code?
+class test:
+    def __init__(self):
+        self.variable = 'Old'
+        self.Change(self.variable)
+    def Change(self, var):
+        var = 'New'
+obj=test()
+print(obj.variable)
+
+a) Error because function change can’t be called in the __init__ function
+b) ‘New’ is printed
+c) ‘Old’ is printed *
+d) Nothing is printed
+
+14. The assignment of more than one function to a particular operator is _______
+a) Operator over-assignment
+b) Operator overriding 
+c) Operator overloading *
+d) Operator instance
+
+15. Which piece of code creates an empty class?
+a)
+class A:
+    return
+b)  *
+class A:
+    pass
+c)
+class A:
+d) It is not possible to create an empty class.
+
+16. What are the methods which begin and end with two underscore characters called?
+a) Special methods *
+b) In-built methods
+c) User-defined methods
+d) Additional methods
+
+17. What is the output of the following piece of code?
+class stud:
+   def __init__(self, roll_no, grade):
+      self.roll_no = roll_no
+      self.grade = grade
+   def display (self):
+      print("Roll no : ", self.roll_no,  ", Grade: ", self.grade)
+stud1 = stud(34, ‘S’)
+stud1.age=7
+print(hasattr(stud1, 'age'))
+
+a) Error as age isn’t defined *
+ b) True
+ c) False
+ d) 7
+
+18. __del__ method is used to destroy instances of a class. True or False?
+ a) True  *
+ b) False
+
+19. What is the output of the following piece of code?
+class A():
+    def disp(self):
+        print("A disp()")
+class B(A):
+    pass
+obj = B()
+obj.disp()
+a) Invalid syntax for inheritance
+b) Error because when object is created, argument must be passed
+c) Nothing is printed
+d) A disp() *
+
+Explanation: Class B inherits class A hence the function disp () becomes part of class B’s definition. Hence disp() method is properly executed and the line is printed.
+
+20. All subclasses are a subtype in object-oriented programming. Is the statement true or false?
+a) True
+b) False *
+
+Explanation: A subtype is something that be substituted for and behave as its parent type. All subclass may not be a subtype in object-oriented programming
+
+21. What is the output of the following piece of code?
+class Test:
+    def __init__(self):
+        self.x = 0
+class Derived_Test(Test):
+    def __init__(self):
+        Test.__init__(self)
+        self.y = 1
+def main():
+    b = Derived_Test()
+    print(b.x,b.y)
+main()
+
+a) Error because class B inherits A but variable x isn’t inherited
+b) 0 0
+c) 0 1  *
+d) Error, the syntax of the invoking method is wrong
+
+Explanation: Since the invoking method has been properly invoked, variable x from the main class has been properly inherited and it can also be accessed.
+
+22. What is the output of the following piece of code?
+class A:
+    def one(self):
+        return self.two()
+ 
+    def two(self):
+        return 'A'
+ 
+class B(A):
+    def two(self):
+        return 'B'
+obj1=A()
+obj2=B()
+print(obj1.two(),obj2.two())
+
+a) A A
+b) A B *
+c) B B
+d) An exception is thrown
+
+23. What type of inheritance is illustrated in the following piece of code?
+class A():
+    pass
+class B():
+    pass
+class C(A,B):
+    pass
+a) Multi-level inheritance
+b) Multiple inheritance *
+c) Hierarchical inheritance
+d) Single-level inheritance
+
+24. What is the output of the following piece of code?
+class A:
+    def __init__(self,x):
+        self.x = x
+    def count(self,x):
+        self.x = self.x+1
+class B(A):
+    def __init__(self, y=0):
+        A.__init__(self, 3)
+        self.y = y
+    def count(self):
+        self.y += 1     
+def main():
+    obj = B()
+    obj.count()
+    print(obj.x, obj.y)
+main()
+
+a) 3 0
+b) 3 1 *
+c) 0 1
+d) An exception in thrown
+
+25. What is the output of the following piece of code?
+class A:
+    def __init__(self):
+        self._x = 5       
+class B(A):
+    def display(self):
+        print(self._x)
+def main():
+    obj = B()
+    obj.display()
+main()
+
+a) Error, invalid syntax for object declaration
+b) Nothing is printed
+c) 5 *
+d) Error, private class member can’t be accessed in a subclass

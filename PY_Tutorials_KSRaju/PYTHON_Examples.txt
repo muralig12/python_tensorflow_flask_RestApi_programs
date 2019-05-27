@@ -1,0 +1,453 @@
+1 Python Program to Calculate the Average of Numbers in a Given List 
+ANS:
+n=int(input("Enter the number of elements to be inserted: "))
+a=[]
+for i in range(0,n):
+    elem=int(input("Enter element: "))
+    a.append(elem)
+avg=sum(a)/n
+print("Average of elements in the list",round(avg,2))
+
+2 Python Program to Exchange the Values of Two Numbers Without Using a Temporary Variable
+ANS:
+a=int(input("Enter value of first variable: "))
+b=int(input("Enter value of second variable: "))
+a=a+b
+b=a-b
+a=a-b
+print("a is:",a," b is:",b)
+
+3 Python Program to Read a Mumber n and Compute n+nn+nnn 
+ANS:
+n=int(input("Enter a number n: "))
+temp=str(n)
+t1=temp+temp
+t2=temp+temp+temp
+comp=n+int(t1)+int(t2)
+print("The value is:",comp)
+
+4 Python Program to Reverse a Given Number 
+ANS:
+n=int(input("Enter number: "))
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+print("Reverse of the number:",rev)
+
+5 Python Program to Check Whether a Number is Positive or Negative 
+ANS:
+n=int(input("Enter number: "))
+if(n>0):
+    print("Number is positive")
+else:
+    print("Number is negative")
+
+6 Python Program to Take in the Marks of 5 Subjects and Display the Grade	
+ANS
+sub1=int(input("Enter marks of the first subject: "))
+sub2=int(input("Enter marks of the second subject: "))
+sub3=int(input("Enter marks of the third subject: "))
+sub4=int(input("Enter marks of the fourth subject: "))
+sub5=int(input("Enter marks of the fifth subject: "))
+avg=(sub1+sub2+sub3+sub4+sub4)/5
+if(avg>=90):
+    print("Grade: A")
+elif(avg>=80&avg<90):
+    print("Grade: B")
+elif(avg>=70&avg<80):
+    print("Grade: C")
+elif(avg>=60&avg<70):
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+7 Python Program to Print all Numbers in a Range Divisible by a Given Number 
+ANS:
+lower=int(input("Enter lower range limit:"))
+upper=int(input("Enter upper range limit:"))
+n=int(input("Enter the number to be divided by:"))
+for i in range(lower,upper+1):
+    if(i%n==0):
+        print(i)
+8 Python Program to Read Two Numbers and Print Their Quotient and Remainder	
+ANS:
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+quotient=a//b
+remainder=a%b
+print("Quotient is:",quotient)
+print("Remainder is:",remainder)
+
+9 Python Program to Accept Three Digits and Print all Possible Combinations from the Digits 
+ANS:
+a=int(input("Enter first number:"))
+b=int(input("Enter second number:"))
+c=int(input("Enter third number:"))
+d=[]
+d.append(a)
+d.append(b)
+d.append(c)
+for i in range(0,3):
+    for j in range(0,3):
+        for k in range(0,3):
+            if(i!=j&j!=k&k!=i):
+                print(d[i],d[j],d[k])
+
+10 Python Program to Print Odd Numbers Within a Given Range 
+ANS: 
+lower=int(input("Enter the lower limit for the range:"))
+upper=int(input("Enter the upper limit for the range:"))
+for i in range(lower,upper+1):
+    if(i%2!=0):
+        print(i)
+
+11 Python Program to Find the Sum of Digits in a Number 
+ANS:
+n=int(input("Enter a number:"))
+tot=0
+while(n>0):
+    dig=n%10
+    tot=tot+dig
+    n=n//10
+print("The total sum of digits is:",tot)
+
+12 Python Program to Find the Smallest Divisor of an Integer 
+ANS:
+n=int(input("Enter an integer:"))
+a=[]
+for i in range(2,n+1):
+    if(n%i==0):
+        a.append(i)
+a.sort()
+print("Smallest divisor is:",a[0])
+
+13 Python Program to Count the Number of Digits in a Number 
+ANS:
+n=int(input("Enter number:"))
+count=0
+while(n>0):
+    count=count+1
+    n=n//10
+print("The number of digits in the number are:",count)
+
+14 Python Program to Check if a Number is a Palindrome 
+ANS:
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+15 Python Program to Print all Integers that Aren’t Divisible by Either 2 or 3 and Lie between 1 and 50. 
+ANS:
+for i in range(0,51):
+    if(i%2!=0&i%3!=0):
+        print(i)
+
+16 Python Program to Read a Number n And Print the Series "1+2+…..+n= " 
+ANS:
+n=int(input("Enter a number: "))
+a=[]
+for i in range(1,n+1):
+    print(i,sep=" ",end=" ")
+    if(i<n):
+        print("+",sep=" ",end=" ")
+    a.append(i)
+print("=",sum(a))
+print()
+
+17 Python Program to Read a Number n and Print the Natural Numbers Summation Pattern 
+ANS:
+n=int(input("Enter a number: "))
+for j in range(1,n+1):
+    a=[]
+    for i in range(1,j+1):
+        print(i,sep=" ",end=" ")
+        if(i<j):
+            print("+",sep=" ",end=" ")
+        a.append(i)
+    print("=",sum(a))
+print()
+
+18 Python Program to Print an Identity Matrix 
+ANS:
+n=int(input("Enter a number: "))
+for i in range(0,n):
+    for j in range(0,n):
+        if(i==j):
+            print("1",sep=" ",end=" ")
+        else:
+            print("0",sep=" ",end=" ")
+    print()
+
+19 Python Program to Print an Inverted Star Pattern 
+ANS:
+n=int(input("Enter number of rows: "))
+for i in range (n,0,-1):
+    print((n-i) * ' ' + i * '*')
+
+20 Python Program to Read Print Prime Numbers in a Range using Sieve of Eratosthenes	
+ANS:
+n=int(input("Enter upper limit of range: "))
+sieve=set(range(2,n+1))
+while sieve:
+    prime=min(sieve)
+    print(prime,end="\t")
+    sieve-=set(range(prime,n+1,prime))
+ print()
+
+
+LIST Examples:
+1 Python Program to Find the Largest Number in a List 
+ANS:
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+a.sort()
+print("Largest element is:",a[n-1])
+
+2 The program takes a list and prints the second largest number in the list.
+ANS:
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+a.sort()
+print("Second largest element is:",a[n-2])
+
+3 Python Program to Put Even and Odd elements in a List into Two Different Lists 
+ANS:
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+even=[]
+odd=[]
+for j in a:
+    if(j%2==0):
+        even.append(j)
+    else:
+        odd.append(j)
+print("The even list",even)
+print("The odd list",odd)
+
+4 Python Program to Merge Two Lists and Sort it 
+ANS:
+a=[]
+c=[]
+n1=int(input("Enter number of elements:"))
+for i in range(1,n1+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+n2=int(input("Enter number of elements:"))
+for i in range(1,n2+1):
+    d=int(input("Enter element:"))
+    c.append(d)
+new=a+c
+new.sort()
+print("Sorted list is:",new)
+
+5. Python Program to Sort the List According to the Second Element in Sublist
+ANS:
+a=[['A',34],['B',21],['C',26]]
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j][1]>a[j+1][1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp
+print(a)
+
+6 Python Program to Find the Second Largest Number in a List Using Bubble Sort 
+ANS
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j]>a[j+1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp 
+print('Second largest number is:',a[n-2])
+
+7 Python Program to Sort a List According to the Length of the Elements 
+ANS
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=input("Enter element:")
+    a.append(b)
+a.sort(key=len)
+print(a)
+
+8 Python Program to Find the Union of two Lists 
+ANS:
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b=[sum(a[0:x+1]) for x in range(0,len(a))]
+print("The original list is: ",a)
+print("The new list is: ",b)
+
+9 Python Program to Find the Intersection of Two Lists 
+ANS
+def intersection(a, b):
+    return list(set(a) & set(b))
+def main():
+    alist=[]
+    blist=[]
+    n1=int(input("Enter number of elements for list1:"))
+    n2=int(input("Enter number of elements for list2:"))
+    print("For list1:")
+    for x in range(0,n1):
+        element=int(input("Enter element" + str(x+1) + ":"))
+        alist.append(element)
+    print("For list2:")
+    for x in range(0,n2):
+        element=int(input("Enter element" + str(x+1) + ":"))
+        blist.append(element)
+    print("The intersection is :")
+    print(intersection(alist, blist))
+main()
+
+10 Python Program to Create a List of Tuples with the First Element as the Number and Second Element as the Square of the Number 
+ANS
+l_range=int(input("Enter the lower range:"))
+u_range=int(input("Enter the upper range:"))
+a=[(x,x**2) for x in range(l_range,u_range+1)]
+print(a)
+
+11 Python Program to Find all Numbers in a Range which are Perfect Squares and Sum of all Digits in the Number is Less than 10 
+ANS
+l=int(input("Enter lower range: "))
+u=int(input("Enter upper range: "))
+a=[]
+a=[x for x in range(l,u+1) if (int(x**0.5))**2==x and sum(list(map(int,str(x))))<10]
+print(a)
+
+12 Python Program to Find the Cumulative Sum of a List where the ith Element is the Sum of the First i+1 Elements From The Original List 
+ANS:
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b=[sum(a[0:x+1]) for x in range(0,len(a))]
+print("The original list is: ",a)
+print("The new list is: ",b)
+
+13 Python Program to Generate Random Numbers from 1 to 20 and Append Them to the List 
+ANS
+import random
+a=[]
+n=int(input("Enter number of elements:"))
+for j in range(n):
+    a.append(random.randint(1,20))
+print('Randomised list is: ',a)
+
+14 Python program to Sort a List of Tuples in Increasing Order by the Last Element in Each Tuple 
+ANS
+def last(n):
+    return n[-1]  
+def sort(tuples):
+    return sorted(tuples, key=last)
+a=input("Enter a list of tuples:")
+print("Sorted:")
+print(sort(a))
+
+15 Python Program to Swap the First and Last Value of a List 
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+temp=a[0]
+a[0]=a[n-1]
+a[n-1]=temp
+print("New list is:")
+print(a)
+
+16 Python Program to Remove the Duplicate Items from a List 
+ANS
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)
+
+17 Python Program to Read a List of Words and Return the Length of the Longest One 
+ANS
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=input("Enter element" + str(x+1) + ":")
+    a.append(element)
+max1=len(a[0])
+temp=a[0]
+for i in a:
+    if(len(i)>max1):
+       max1=len(i)
+       temp=i
+print("The word with the longest length is:")
+print(temp)
+
+18 Python Program to Remove the ith Occurrence of the Given Word in a List where Words can Repeat 
+ANS:
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=input("Enter element" + str(x+1) + ":")
+    a.append(element)
+print(a)
+c=[]
+count=0
+b=input("Enter word to remove: ")
+n=int(input("Enter the occurrence to remove: "))
+for i in a:
+    if(i==b):
+        count=count+1
+        if(count!=n):
+            c.append(i)
+    else:
+        c.append(i)
+if(count==0):
+    print("Item not found ")
+else: 
+    print("The number of repetitions is: ",count)
+    print("Updated list is: ",c)
+    print("The distinct elements are: ",set(a))
+
+19 Python Program to Remove All Tuples in a List of Tuples with the USN Outside the Given Range 
+ANS
+y=[('a','12CS039'),('b','12CS320'),('c','12CS055'),('d','12CS100')]
+low=int(input("Enter lower roll number (starting with 12CS):"))
+up=int(input("Enter upper roll number (starting with 12CS):"))
+l='12CS0'+str(low)
+u='12CS'+str(up)
+p=[x for x in y if x[1]>l and x[1]<u]
+print(p)

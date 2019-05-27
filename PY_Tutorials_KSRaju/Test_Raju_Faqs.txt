@@ -1,0 +1,171 @@
+﻿1 Python Program to Reverse a Given Number 
+n=int(input("Enter number: "))
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+print("Reverse of the number:",rev)
+
+2 Python Program to Find the Sum of Digits in a Number 
+n=int(input("Enter a number:"))
+tot=0
+while(n>0):
+    dig=n%10
+    tot=tot+dig
+    n=n//10
+print("The total sum of digits is:",tot)
+
+3 Python Program to Check if a Number is a Palindrome 
+n=int(input("Enter number:"))
+temp=n
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+if(temp==rev):
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+4 Python Program to Print an Inverted Star Pattern 
+ANS:
+n=int(input("Enter number of rows: "))
+for i in range (n,0,-1):
+    print((n-i) * ' ' + i * '*')
+
+*****
+ ****
+  ***
+   **
+    *
+
+5 Python Program to Swap the First and Last Value of a List 
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+temp=a[0]
+a[0]=a[n-1]
+a[n-1]=temp
+print("New list is:")
+print(a)
+
+6 Print the multiplication table for given number with specific range[rows]
+n1=int(input('enter the n1 value:\t'))
+n2=int(input('how many rows:'))
+for i in range(1,n2+1,1):
+    print(n1,'X',i,'=',n1*i)
+
+7 Output of the following script
+pylist=[1,2,3,4,[5,6,7,8,[9,10,11,12,[13,14,15,16]]]]
+print(pylist)
+print(pylist[4][4][4][3])#16
+
+8 Output of the following script
+r = lambda q: q * 2; s = lambda q: q * 3
+x = 3; x = r(x);x = s(x);x = r(x)
+print (x,x)
+
+9. Output of the following script
+var1 = 'Hello NareshIT!'   
+var2 = "NareshITHYD"
+print("var1[0]: ", var1[0])
+print("var2[1:5]: ", var2[1:5])
+
+10 What is the value of this expression: bin(10-2)+bin(12^4)
+
+11 What is the output of print(['hello', 'morning'][bool(True)])
+
+12 Count the Number of Vowels in a String 
+string=input("Enter string:")
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print("Number of vowels are:")
+print(vowels)
+
+13 Calculate the Number of Digits and Letters in a String 
+string=input("Enter string:")
+count1=0
+count2=0
+for i in string:
+      if(i.isdigit()):
+            count1=count1+1
+      count2=count2+1
+print("The number of digits are:",count1)
+print("The number of characters are:",count2)
+    
+14 Check a Number is a Prime Number or Not
+a=int(input("Enter number: "))
+k=0
+for i in range(2,a//2+1):
+    if(a%i==0):
+        k=k+1
+if(k<=0):
+    print("Number is prime")
+else:
+    print("Number isn't prime")
+
+15 Output of the following
+for i in range(10):
+    if i == 5:
+        break
+    else:
+        print(i)
+else:
+    print("Here")
+
+16 Output of the statement is
+print('my_string'.isidentifier())
+
+17 What is the output of the code shown below?
+l=[2, 3, [4, 5]]
+l2=l.copy()
+l2[0]=88
+print(l)
+print(l2)
+
+18 What is the output of the following code?
+l1=[10, 20, 30]
+l2=[-10, -20, -30]
+l3=[x+y for x, y in zip(l1, l2)]
+print(l3)
+
+19 What is the output of the code shown below?
+l1=[1,2,3]
+l2=[4,5,6]
+l3=[7,8,9]
+for x, y, z in zip(l1, l2, l3):
+	print(x, y, z)
+
+20 What is the output of the code shown below?
+a={}
+print(a.fromkeys([1,2,3],"check"))
+
+21 What is the output of the following code?
+a={1,2,3}
+b=a.add(4)
+print(b)
+
+22 What is the output of the following piece of code?
+a=(2,3,1,5);a.sort();print(a)
+
+23 What is the output of the following piece of code?
+a=list((45,)*4)
+print((45)*4)
+print(a)
+
+24 What is the output of the following piece of code?
+print([[i+j for i in "abc"] for j in "def"])
+[['ad', 'bd', 'cd'], ['ae', 'be', 'ce'], ['af', 'bf', 'cf']]
+
+25 What is the output of the snippet of code shown below?
+x=set('abcde')
+y=set('xyzbd')
+x.difference_update(y)
+print(x)#{'a', 'c', 'e'}
+print(y)#{'x', 'y', 'b', 'z', 'd'}

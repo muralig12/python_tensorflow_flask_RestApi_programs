@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 21 15:10:01 2018
+
+@author: srikanth
+"""
+
+import numpy as np
+arr=np.arange(0,11)
+print(arr)
+print(arr[5])
+print(arr[2:6])
+arr[0:4]=50
+print(arr)
+slice_arr=arr[0:6]
+print(slice_arr)
+slice_arr[:]=100
+print(slice_arr)
+print(arr)
+arr=np.arange(0,11)
+print(arr)
+arr_copy=arr.copy()
+print(arr_copy)
+arr_copy[:]=150
+print(arr_copy)
+print(arr)
+arr_2d=np.array([[5,10,15],[20,25,30],[35,40,45]])
+print(arr_2d)
+print(arr_2d[2][1])
+print(arr_2d[1,2])
+
+print(arr_2d[1:,1:])
+print(arr_2d[0:2,0:2])
+
+arr=np.arange(1,11)
+print(arr)
+bool_arr=arr>5
+print(bool_arr)
+print(arr[bool_arr])
+
+
+arr_2d=np.arange(50).reshape(5,10)
+print(arr_2d)
+print(arr_2d[1:3,6:8])
